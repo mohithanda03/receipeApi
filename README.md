@@ -30,4 +30,4 @@ Health check using Spring actuator url : http://localhost:8080/actuator/health
 
 Swagger-ui url : http://localhost:8080/swagger-ui/index.html
 
-Please refer to the postman collection file "recepieApi.postman_collection.json" for the sample requests.
+Please refer to the postman collection file "recipeApi.postman_collection.json" for the sample requests.
