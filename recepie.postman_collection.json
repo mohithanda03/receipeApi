@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "b25590c2-467c-4752-aa2f-95efa0c4b7af",
+		"name": "new_recepie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "9729250"
+	},
+	"item": [
+		{
+			"name": "AddRecipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipeName\": \"Paneer Tikka Biriani\",\r\n    \"category\": \"vegeterian\",\r\n    \"instructions\":\"Cook \",\r\n    \"servings\": 4,\r\n    \"ingredients\": [{\r\n        \"name\": \"Paneer\"\r\n    },{\r\n        \"name\": \"spices\"\r\n    }, {\r\n        \"name\": \"paprika\"\r\n    }, {\r\n        \"name\": \"rice\"\r\n    }, {\r\n        \"name\":\"Coriander\"\r\n    }]\r\n}"
+				},
+				"url": "http://localhost:8080/recipe"
+			},
+			"response": []
+		},
+		{
+			"name": "AddRecipe Desert",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipeName\": \"Rasmalai\",\r\n    \"category\": \"Desert\",\r\n    \"instructions\":\"slowly cook paneer balls in kesar milk \",\r\n    \"servings\": 4,\r\n    \"ingredients\": [{\r\n        \"name\": \"Paneer\"\r\n    },{\r\n        \"name\": \"safron\"\r\n    }, {\r\n        \"name\": \"mikl\"\r\n    }, {\r\n        \"name\": \"sugar\"\r\n    }, {\r\n        \"name\":\"almonds\"\r\n    }]\r\n}"
+				},
+				"url": "http://localhost:8080/recipe"
+			},
+			"response": []
+		},
+		{
+			"name": "AddRecipe Desert 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"recipeName\": \"Manglore bun\",\r\n    \"category\": \"Desert\",\r\n    \"instructions\":\"Add butter to bun.\",\r\n    \"servings\": 4,\r\n    \"ingredients\": [{\r\n        \"name\": \"bun\"\r\n    },{\r\n        \"name\": \"butter\"\r\n    }, {\r\n        \"name\": \"milk\"\r\n    }, {\r\n        \"name\": \"sugar\"\r\n    }]\r\n}"
+				},
+				"url": "http://localhost:8080/recipe"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllRecipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/recipes"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRecipe",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"recipeId\": \"c62b9bb3-6172-403d-a6fe-6a1082f999ab\",\r\n        \"recipeName\": \"Manglore bun\",\r\n        \"category\": \"Desert\",\r\n        \"instructions\": \"gas\",\r\n        \"servings\": 4,\r\n        \"ingredients\": [\r\n            {\r\n                \"ingredientId\": \"f348acb4-1c11-4639-977f-4ff07fbffea8\",\r\n                \"name\": \"Banana\"\r\n            },\r\n            {\r\n                \"ingredientId\": \"35020f49-0ef2-4b0b-98fb-f0970167cbf0\",\r\n                \"name\": \"Flour\"\r\n            },\r\n            {\r\n                \"ingredientId\": \"fcce1347-a3dc-4ad4-9647-3e8e4bd1711d\",\r\n                \"name\": \"Sugar\"\r\n            },\r\n             {\r\n                \"name\": \"Oil\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/recipe"
+			},
+			"response": []
+		},
+		{
+			"name": "SearchRecipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"instructions\":\"paneer\",\r\n    \"servings\":4,\r\n    \"ingredients\": {\"paneer\": false}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/search/recipes"
+			},
+			"response": []
+		},
+		{
+			"name": "Search By category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/recipes/category/Desert"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Recipe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/recipe/03744d46-1701-4c54-804e-d70b5575fc49"
+			},
+			"response": []
+		}
+	]
+}
